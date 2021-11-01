@@ -1,0 +1,3 @@
+#!/usr/bin/python3
+x=str("hola mundo")
+print(x)
