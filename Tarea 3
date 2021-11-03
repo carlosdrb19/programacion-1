@@ -1,0 +1,8 @@
+#!/usr/bin/pyton3
+vradio = float(input("introduzca el radio de la circunferencia: "))
+vlongitud = 2 * 3.14 * vradio
+varea = 3.14 * (vradio**2)
+print("La longitud de la circunferencia es: ", vlongitud)
+print("El area de la circunferencia es: ", varea)
+print("Gracias, usuario")
+
