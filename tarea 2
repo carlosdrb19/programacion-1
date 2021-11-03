@@ -1,0 +1,6 @@
+#!/usr/bin/pyton3
+vbase = float(input("introduzca la base del triangulo: "))
+valtura = float(input("introduzca la altura del triangulo: "))
+superficie = (vbase * valtura)/2
+print("la superficie del triangulo es: ", superficie)
+print("Gracias usuario")
