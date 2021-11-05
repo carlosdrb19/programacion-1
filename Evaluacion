@@ -1,0 +1,23 @@
+#!/usr/bin/pyton3
+def ocurrencia_vocales (texto):
+    acumuladorA = 0
+    acumuladorE = 0
+    acumuladorI = 0
+    acumuladorO = 0
+    acumuladorU = 0
+    for vVocales in texto:
+        if vVocales.lower() in "aAáÁ":
+            acumuladorA += 1
+        if vVocales.lower() in "EeÉé":
+            acumuladorE += 1
+        if vVocales.lower () in "IÍií":
+            acumuladorI += 1
+        if vVocales.lower () in "OÓoó":
+            acumuladorI += 1
+        if vVocales.lower () in "UÚuú":
+            acumuladorU += 1
+    return acumuladorA, acumuladorE, acumuladorI, acumuladorO, acumuladorU        
+texto = "Bnos. tardes Estimados Estudiantes. No olviden el uso del hashtag #teleprgm1 en el asunto de los correos en esta materia. Las consultas, por el grupo de whatsapp o exclusivamente al correo con el hashtag:#teleprgm1_cnslt. Por favor, no omitan esta práctica, de lo contrario, corremos el riesgo de que sus comunicaciones se pierdan. Agradecido por la comprensión."
+VsumaVocales = ocurrencia_vocales(texto)
+print("En el texto designado hay un total de: ", VsumaVocales)
+print("Entiendo que el orden de las vocales es a, e, i, o, u, respectivamente")
