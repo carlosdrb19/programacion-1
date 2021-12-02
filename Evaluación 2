@@ -1,0 +1,41 @@
+#!/usr/bin/python3
+class Estudiante:
+     def __init__(self, cedula, nombre, apellido, carrera, AnioDeIngreso):
+         self.cedula = cedula
+         self.nombre = nombre
+         self.apellido = apellido
+         self.AnioDeIngreso = AnioDeIngreso
+         self.carrera = carrera
+     
+class Estudiante_encurso (Estudiante):
+   
+    def CursosInscritos (self, vCursosInscritos):
+        print("este estudiante esta viendo: ",vCursosInscritos)
+       
+class Estudiante_egresado(Estudiante):
+    __AnioDeEgreso = 0
+   
+    def AnioDeEgreso (self, vAnioDeEgreso):
+       
+        if vAnioDeEgreso < self.AnioDeIngreso:
+            print ("Fecha de egreso incorrecta")
+        else:
+            print ("Fecha de egreso correcta")
+            self.__AnioDeEgreso = vAnioDeEgreso
+
+class Estudiante_retirado (Estudiante):
+    def FechaDeRetiro (self, vFechaDeRetiro):
+        print ("La fecha de retiro del estudiante fue: ", vFechaDeRetiro)
+     
+class Estudiante_Encurso (Estudiante):
+    def NoGraduado (self):
+        print ("El estudiante no se ha graduado")
+
+estudiante1 = Estudiante_encurso(2, "Luis", "Perez", "Telematica", 2006)
+estudiante1.CursosInscritos(6)
+estudiante2 = Estudiante_egresado(2, "Luis", "Perez", "Telematica", 2006)
+estudiante2.AnioDeEgreso(2003)
+estudiante3 = Estudiante_retirado(2, "Luis", "Perez", "Telematica", 2006)
+estudiante3.FechaDeRetiro(2009)
+estudiante4 = Estudiante_Encurso(2, "Luis", "Perez", "Telematica", 2006)
+estudiante4.NoGraduado()
