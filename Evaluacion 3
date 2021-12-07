@@ -1,0 +1,67 @@
+#!/usr/bin/python3
+class Cuentas:
+    def init(self, Nombre, Apellido, Capital, tasa, Tiempo):
+        self.Nombre = Nombre
+        self.Apellido = Apellido
+        self.Capital = Capital
+        self.Tasa = Tasa
+        self.Tiempo = Tiempo
+    def Consultarmisaldo (self):
+         vSaldo = self.__saldo
+        print("El usuario tiene un saldo de:", self.__saldo)    
+    def Depositar (self):
+        vDepositos = self.__depositos
+        print ("Ingrese el monto a depositar: ", self.__depositos)
+        saldototal = vDepositos + vSaldo
+        print ("Ahora usted cuenta con un saldo de: ", saldototal)
+    def Retirar (self):
+        vRetiros = self.__retiros
+        if vRetiros < vSaldo:
+            print ("No se puede retirar, saldo insuficiente")
+        else:
+            totalsaldo = vSaldo - vRetiros
+            print ("Ahora usted cuenta con un saldo de: ", totalsaldo)
+    def AbonodeIntereses (self):
+        tipodelaCuenta = self.__tipodelacuenta
+        interes = 0        
+        if TipodelaCuenta == "ahorro":
+            ("Su cuenta es: ", self.__tipodelacuenta, ", por lo tanto, usted tiene abono de interés")
+            intereses = capital * tasa * tiempo
+            print ("El bono será: ", interes)
+        else:
+            print ("Su bono no cambia")
+
+class Corriente (Cuentas):
+    pass
+
+class Ahorro (Cuentas): 
+    def AbonodeIntereses (self):
+        tipodelaCuenta = self.__tipodelacuenta
+        interes = 0        
+        if TipodelaCuenta == "ahorro":
+            ("Su cuenta es: ", self.__tipodelacuenta, ", por lo tanto, usted tiene abono de interés")
+            intereses = capital * tasa * tiempo
+            print ("El bono será: ", interes)
+        else:
+            print ("Su bono no cambia")
+            
+class Plazofijo (Cuentas):
+    tipodelaCuenta = "ahorro"
+    def plazofijo (self):
+        TipodemiCuenta = self.__tipodelacuenta
+        saldo = 800
+        interes = 200
+        abonodeinteres = float (0)
+        total = float (0)
+        if TipodemiCuenta == "ahorro":
+            print ("Su cuenta es de tipo: ", TipodemiCuenta, "procederemos a culcular")
+            abonodeinteres = ((saldo * 10)/100) + interes
+            print ("La totalidad de su abono por plazo fijo es: ", abonodeinteres)
+        else:
+            print ("Usted no tiene plazo fijo")
+    
+cuenta= Cuentas ("Carlos", "Rodriguez", "Ahorro", 19, 14, 18)
+cuenta.Consultarmisaldo()
+cuenta.Depositar(200)
+cuenta.Retirar(4)
+cuenta.AbonoIntereses(2000, 18, 6)
